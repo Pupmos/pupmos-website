@@ -17,39 +17,37 @@ export function CloudPup() {
     target: ref,
     // offset: ["end end", "start start"],
   });
-  const scaleX = useSpring(scrollYProgress, {
+  const isVisible = useInView(ref);
+  const lightSpring = useSpring(scrollYProgress, {
     stiffness: 80,
     damping: 50,
     restDelta: 0.001,
   });
-  const translateX = useTransform(scaleX, [-1, 1], ["120vw", "-20vw"]);
+
+  const translateX = useTransform(lightSpring, [-1, 1], ["100vw", "-50vw"]);
   return (
     <>
-      <motion.div
-        style={{ translateX, translateY: -15 }}
-        className={"absolute w-[300px] z-10"}
-        ref={imageRef}
-      >
-        <motion.img
-          src="/animations/pupmos-cloud.png"
-          alt="Pupmos Cloud"
-          className="w-full"
-          animate={{
-            translateY: [0, 10, 0],
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatDelay: 0,
-          }}
-        />
+      <motion.div className="mb-[-4em] pt-[4em]" ref={ref}>
+        <AnimatePresence>
+          {isVisible && (
+            <motion.div
+              style={{ translateX }}
+              className={"absolute w-[300px] z-10"}
+              ref={imageRef}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <motion.img
+                src="/animations/pupmos-cloud.png"
+                alt="Pupmos Cloud"
+                className="w-full"
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
-      <motion.div
-        style={{ marginTop: (imageRef.current?.offsetHeight || 0) / 2 }}
-        className={"absolute left-0"}
-        ref={ref}
-      ></motion.div>
     </>
   );
 }

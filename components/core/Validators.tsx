@@ -26,7 +26,7 @@ export function Validators() {
   return (
     <SimpleGrid
       mt="10"
-      columns={3}
+      columns={[1, 2, 3, null, null, 4]}
       spacing={10}
       alignItems="center"
       justifyContent={"center"}
@@ -67,10 +67,10 @@ function Validator({ validator }: { validator: Chain }) {
       <Text textAlign={"right"} fontSize="2xl" fontWeight="black">
         {validator.name.toUpperCase()}
       </Text>
-      <StatGroup>
+      <StatGroup className='mt-2'>
         <Stat>
-          <StatLabel>STEAK</StatLabel>
-          <StatNumber>
+          <StatLabel color='gray.400'>STEAK</StatLabel>
+          <StatNumber color='pink.200'>
             ${formatStake(validator.delegations.total_usd)?.toLocaleString()}
           </StatNumber>
           <StatHelpText>

@@ -3,7 +3,7 @@ title: "Pupmøs: The Goodest Boy in Cosmos"
 ---
 
 import { Header } from "../components/docs";
-import { CornerPup, CloudPup, Validators } from "../components/core";
+import { CornerPup, CloudPup, Validators, CloudInfrastructure } from "../components/core";
 
 
 <CornerPup
@@ -18,9 +18,9 @@ import { CornerPup, CloudPup, Validators } from "../components/core";
 
 
 <div className="relative mb-10 flex flex-col items-center">
-  <h2 className="mt-12 text-5xl tracking-tighter sm:text-6xl lg:text-7xl xl:text-7xl text-left mb-6 font-black leading-[1.1]">
-    <span className="inline-block text-transparent bg-gradient-to-r from-gray-700 to-slate-800 bg-clip-text leading-[1.1]">
-      <span>&nbsp;borkchains&nbsp;</span>
+  <h2 className="mt-12 text-5xl tracking-tighter sm:text-6xl lg:text-7xl xl:text-7xl text-center mb-6 font-black leading-[1.1]">
+    <span className="inline-block text-transparent bg-gradient-to-r from-gray-400 to-slate-500 bg-clip-text leading-[1.1]">
+      <span>&nbsp;borkchainz&nbsp;</span>
     </span>
   </h2>
 </div>
@@ -33,15 +33,7 @@ import { CornerPup, CloudPup, Validators } from "../components/core";
   whenHidden={{ top: "-6rem", left: "-10rem", rotate: "-220deg" }}
 />
 
-<div className="relative mb-10 flex flex-col items-center">
-  <h2 className="mt-12 text-6xl tracking-tighter sm:text-7xl lg:text-8xl xl:text-8xl text-center mb-6 font-black leading-[1.1]">
-    Cloud
-    <span className="inline-block text-transparent bg-gradient-to-r from-sky-300 to-blue-500 bg-clip-text leading-[1.4] ">
-      <CloudPup />
-      <span>&nbsp;Infrastructure&nbsp;</span>
-    </span>
-  </h2>
-</div>
+<CloudInfrastructure/>
 
 
 Pupmøs provides RPC, API, and GRPC nodes for all Cosmos blockchains on which he zoomz. This infrastructure is available for all validators and developers to use for free. A top sneecret high performance node service is also rumored to be in the works. berrie sneec.
