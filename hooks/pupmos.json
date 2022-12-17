@@ -1,0 +1,722 @@
+{
+  "repository": {
+    "url": "https://github.com/eco-stake/validator-registry",
+    "branch": "master",
+    "commit": "66fc81e6ca7d22c89b8d6385054d4b91a39e72e1",
+    "timestamp": 1671228285
+  },
+  "validator": {
+    "path": "pupmos",
+    "name": "PUPMØS",
+    "identity": "69A46F39FB01F4D4",
+    "total_usd": 3454915.290879524,
+    "total_users": 30549,
+    "chains": [
+      {
+        "name": "juno",
+        "address": "junovaloper1ka8v934kgrw6679fs9cuu0kesyl0ljjy2kdtrl",
+        "restake": {
+          "address": "juno1ka6r58g5h27x6gyyjkzxtpdk95k2yurf4ge0fl",
+          "run_time": "01:00",
+          "minimum_reward": 10000
+        },
+        "path": "juno",
+        "moniker": "PUPMØS",
+        "identity": "69A46F39FB01F4D4",
+        "active": true,
+        "hex_address": "FDA77E3592437D1B06EEF7F858363587A38E1D12",
+        "operator_address": "junovaloper1ka8v934kgrw6679fs9cuu0kesyl0ljjy2kdtrl",
+        "consensus_pubkey": {
+          "@type": "/cosmos.crypto.ed25519.PubKey",
+          "key": "THSLRXZusBi9aDukC1SwzpWc3PVj1gq3dqFL6HQuraA="
+        },
+        "jailed": false,
+        "status": "BOND_STATUS_BONDED",
+        "tokens": "1304051275865",
+        "delegator_shares": "1304051275865.000000000000000000",
+        "description": {
+          "moniker": "PUPMØS",
+          "identity": "69A46F39FB01F4D4",
+          "website": "",
+          "security_contact": "security@pupmos.org",
+          "details": "wen witepupper?"
+        },
+        "unbonding_height": "0",
+        "unbonding_time": "1970-01-01T00:00:00Z",
+        "commission": {
+          "commission_rates": {
+            "rate": "0.050000000000000000",
+            "max_rate": "0.200000000000000000",
+            "max_change_rate": "0.100000000000000000"
+          },
+          "update_time": "2021-12-31T15:57:07.910648767Z",
+          "rate": 0.05
+        },
+        "min_self_delegation": "1",
+        "rank": 6,
+        "mintscan_image": "https://raw.githubusercontent.com/cosmostation/cosmostation_token_resource/master/moniker/juno/junovaloper1ka8v934kgrw6679fs9cuu0kesyl0ljjy2kdtrl.png",
+        "keybase_image": "https://s3.amazonaws.com/keybase_processed_uploads/11b3dd78058506ef2e45cde098008d05_360_360.jpg",
+        "slashes": [],
+        "signing_info": {
+          "address": "junovalcons1lknhudvjgd73kphw7lu9sd34s73cu8gjdphmgq",
+          "start_height": "1370490",
+          "index_offset": "4771696",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "0"
+        },
+        "delegations": {
+          "total_tokens": "1304223635421",
+          "total_count": 24912,
+          "total_tokens_display": 1304223.635421,
+          "total_usd": 1604195.07156783
+        },
+        "services": {
+          "staking_rewards": {
+            "name": "PUPMØS",
+            "verified": false,
+            "slug": "pupms"
+          }
+        },
+        "image": "https://raw.githubusercontent.com/cosmostation/cosmostation_token_resource/master/moniker/juno/junovaloper1ka8v934kgrw6679fs9cuu0kesyl0ljjy2kdtrl.png",
+        "uptime": 1,
+        "uptime_periods": [
+          { "blocks": 100, "uptime": 1 },
+          { "blocks": 10000, "uptime": 1 }
+        ],
+        "missed_blocks": 0,
+        "missed_blocks_periods": [
+          { "blocks": 100, "missed": 0 },
+          { "blocks": 10000, "missed": 0 }
+        ],
+        "public_nodes": {
+          "rpc": [
+            {
+              "address": "https://rpc-juno.pupmos.network",
+              "provider": "PUPMØS"
+            }
+          ],
+          "rest": [
+            {
+              "address": "https://api-juno.pupmos.network",
+              "provider": "PUPMØS"
+            }
+          ]
+        },
+        "private_nodes": {}
+      },
+      {
+        "name": "cosmoshub",
+        "address": "cosmosvaloper1vygmh344ldv9qefss9ek7ggsnxparljlmj56q5",
+        "restake": {
+          "address": "cosmos1ka6r58g5h27x6gyyjkzxtpdk95k2yurfr665wr",
+          "run_time": "01:00",
+          "minimum_reward": 10000
+        },
+        "path": "cosmoshub",
+        "moniker": "PUPMØS",
+        "identity": "69A46F39FB01F4D4",
+        "active": true,
+        "hex_address": "6C50CC44B4F1DC32ABD2970D8ACECB204ACCEF85",
+        "operator_address": "cosmosvaloper1vygmh344ldv9qefss9ek7ggsnxparljlmj56q5",
+        "consensus_pubkey": {
+          "@type": "/cosmos.crypto.ed25519.PubKey",
+          "key": "0Nu7qOxlaLNKgOKM2Ck0fB6aKdsH1tjOeJw18VtES2g="
+        },
+        "jailed": false,
+        "status": "BOND_STATUS_BONDED",
+        "tokens": "174366098500",
+        "delegator_shares": "174366098500.000000000000000000",
+        "description": {
+          "moniker": "PUPMØS",
+          "identity": "69A46F39FB01F4D4",
+          "website": "",
+          "security_contact": "",
+          "details": "wen witepupper?"
+        },
+        "unbonding_height": "0",
+        "unbonding_time": "1970-01-01T00:00:00Z",
+        "commission": {
+          "commission_rates": {
+            "rate": "0.016290000000000000",
+            "max_rate": "0.100000000000000000",
+            "max_change_rate": "0.100000000000000000"
+          },
+          "update_time": "2022-04-16T14:48:50.292338970Z",
+          "rate": 0.01629
+        },
+        "min_self_delegation": "1",
+        "rank": 109,
+        "mintscan_image": "https://raw.githubusercontent.com/cosmostation/cosmostation_token_resource/master/moniker/cosmoshub/cosmosvaloper1vygmh344ldv9qefss9ek7ggsnxparljlmj56q5.png",
+        "keybase_image": "https://s3.amazonaws.com/keybase_processed_uploads/11b3dd78058506ef2e45cde098008d05_360_360.jpg",
+        "slashes": [],
+        "services": {
+          "staking_rewards": {
+            "name": "PUPMØS",
+            "verified": false,
+            "slug": "pupms"
+          }
+        },
+        "delegations": {
+          "total_tokens": "174525484233",
+          "total_count": 1636,
+          "total_tokens_display": 174525.484233,
+          "total_usd": 1516626.45798477
+        },
+        "signing_info": {
+          "address": "cosmosvalcons1d3gvc39578wr927jjuxc4nktyp9vemu9ukxq43",
+          "start_height": "10096338",
+          "index_offset": "3186269",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "12"
+        },
+        "image": "https://raw.githubusercontent.com/cosmostation/cosmostation_token_resource/master/moniker/cosmoshub/cosmosvaloper1vygmh344ldv9qefss9ek7ggsnxparljlmj56q5.png",
+        "uptime": 1,
+        "uptime_periods": [
+          { "blocks": 100, "uptime": 1 },
+          { "blocks": 10000, "uptime": 0.9988 }
+        ],
+        "missed_blocks": 0,
+        "missed_blocks_periods": [
+          { "blocks": 100, "missed": 0 },
+          { "blocks": 10000, "missed": 12 }
+        ],
+        "public_nodes": {
+          "rpc": [
+            {
+              "address": "https://rpc-cosmoshub.pupmos.network",
+              "provider": "PUPMØS"
+            }
+          ],
+          "rest": [
+            {
+              "address": "https://api-cosmoshub.pupmos.network",
+              "provider": "PUPMØS"
+            }
+          ]
+        },
+        "private_nodes": {}
+      },
+      {
+        "name": "stargaze",
+        "address": "starsvaloper15sr5ugya95q0ps9qet03ujsten8z05atamhcvy",
+        "restake": {
+          "address": "stars1ka6r58g5h27x6gyyjkzxtpdk95k2yurfhxdf9j",
+          "run_time": "01:00",
+          "minimum_reward": 10000
+        },
+        "path": "stargaze",
+        "moniker": "PUPMØS",
+        "identity": "69A46F39FB01F4D4",
+        "active": true,
+        "hex_address": "3C88BA5790519B590ABAE0D04037F2F7AB9C8F24",
+        "operator_address": "starsvaloper15sr5ugya95q0ps9qet03ujsten8z05atamhcvy",
+        "consensus_pubkey": {
+          "@type": "/cosmos.crypto.ed25519.PubKey",
+          "key": "fsasVgBstXU5Owv5n1xndSBHraIZ7KmVA8RrY3iODPk="
+        },
+        "jailed": false,
+        "status": "BOND_STATUS_BONDED",
+        "tokens": "7155642413080",
+        "delegator_shares": "7155642413080.000000000000000000",
+        "description": {
+          "moniker": "PUPMØS",
+          "identity": "69A46F39FB01F4D4",
+          "website": "",
+          "security_contact": "",
+          "details": "wen witepupper?"
+        },
+        "unbonding_height": "0",
+        "unbonding_time": "1970-01-01T00:00:00Z",
+        "commission": {
+          "commission_rates": {
+            "rate": "0.050000000000000000",
+            "max_rate": "0.100000000000000000",
+            "max_change_rate": "0.100000000000000000"
+          },
+          "update_time": "2022-03-27T22:05:34.001770806Z",
+          "rate": 0.05
+        },
+        "min_self_delegation": "1",
+        "rank": 37,
+        "mintscan_image": "https://raw.githubusercontent.com/cosmostation/cosmostation_token_resource/master/moniker/stargaze/starsvaloper15sr5ugya95q0ps9qet03ujsten8z05atamhcvy.png",
+        "keybase_image": "https://s3.amazonaws.com/keybase_processed_uploads/11b3dd78058506ef2e45cde098008d05_360_360.jpg",
+        "slashes": [],
+        "signing_info": {
+          "address": "starsvalcons18jyt54us2xd4jz46urgyqdlj774eereya3kuy6",
+          "start_height": "2927551",
+          "index_offset": "3108933",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "0"
+        },
+        "delegations": {
+          "total_tokens": "7155576013080",
+          "total_count": 1193,
+          "total_tokens_display": 7155576.01308,
+          "total_usd": 198264.1241630559
+        },
+        "image": "https://raw.githubusercontent.com/cosmostation/cosmostation_token_resource/master/moniker/stargaze/starsvaloper15sr5ugya95q0ps9qet03ujsten8z05atamhcvy.png",
+        "uptime": 1,
+        "uptime_periods": [
+          { "blocks": 100, "uptime": 1 },
+          { "blocks": 25000, "uptime": 1 }
+        ],
+        "missed_blocks": 0,
+        "missed_blocks_periods": [
+          { "blocks": 100, "missed": 0 },
+          { "blocks": 25000, "missed": 0 }
+        ],
+        "public_nodes": {
+          "rpc": [
+            {
+              "address": "https://rpc-stargaze.pupmos.network",
+              "provider": "PUPMØS"
+            }
+          ],
+          "rest": [
+            {
+              "address": "https://api-stargaze.pupmos.network",
+              "provider": "PUPMØS"
+            }
+          ]
+        },
+        "private_nodes": {}
+      },
+      {
+        "name": "meme",
+        "address": "memevaloper1q9k3uh0xl6ss5dwqyq4j4jthdkke8daqp5kzlc",
+        "restake": {
+          "address": "meme1ka6r58g5h27x6gyyjkzxtpdk95k2yurfa9vrff",
+          "run_time": "01:00",
+          "minimum_reward": 10000
+        },
+        "path": "meme",
+        "moniker": "PUPMØS",
+        "identity": "69A46F39FB01F4D4",
+        "active": true,
+        "hex_address": "2943366316FFB2A0A5CDFAE8186842BB331F322F",
+        "operator_address": "memevaloper1q9k3uh0xl6ss5dwqyq4j4jthdkke8daqp5kzlc",
+        "consensus_pubkey": {
+          "@type": "/cosmos.crypto.ed25519.PubKey",
+          "key": "NpDmRferRj9OBR/NWIOfTpevEE5W5UPCjWbcbC+hjbM="
+        },
+        "jailed": false,
+        "status": "BOND_STATUS_BONDED",
+        "tokens": "70468659423716",
+        "delegator_shares": "70468659423716.000000000000000000",
+        "description": {
+          "moniker": "PUPMØS",
+          "identity": "69A46F39FB01F4D4",
+          "website": "",
+          "security_contact": "",
+          "details": "wen witepupper?"
+        },
+        "unbonding_height": "0",
+        "unbonding_time": "1970-01-01T00:00:00Z",
+        "commission": {
+          "commission_rates": {
+            "rate": "0.050000000000000000",
+            "max_rate": "0.100000000000000000",
+            "max_change_rate": "0.100000000000000000"
+          },
+          "update_time": "2022-07-21T17:12:29.757086362Z",
+          "rate": 0.05
+        },
+        "min_self_delegation": "1",
+        "rank": 8,
+        "keybase_image": "https://s3.amazonaws.com/keybase_processed_uploads/11b3dd78058506ef2e45cde098008d05_360_360.jpg",
+        "slashes": [],
+        "signing_info": {
+          "address": "memevalcons199pnvcckl7e2pfwdlt5ps6zzhve37v30dzjz2u",
+          "start_height": "1383404",
+          "index_offset": "2231453",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "0"
+        },
+        "delegations": {
+          "total_tokens": "70468623423716",
+          "total_count": 1315,
+          "total_tokens_display": 70468623.423716
+        },
+        "image": "https://s3.amazonaws.com/keybase_processed_uploads/11b3dd78058506ef2e45cde098008d05_360_360.jpg",
+        "uptime": 1,
+        "uptime_periods": [
+          { "blocks": 100, "uptime": 1 },
+          { "blocks": 10000, "uptime": 1 }
+        ],
+        "missed_blocks": 0,
+        "missed_blocks_periods": [
+          { "blocks": 100, "missed": 0 },
+          { "blocks": 10000, "missed": 0 }
+        ],
+        "public_nodes": {
+          "rpc": [
+            {
+              "address": "https://rpc-meme.pupmos.network/",
+              "provider": "PUPMØS"
+            }
+          ],
+          "rest": [
+            {
+              "address": "https://api-meme.pupmos.network/",
+              "provider": "PUPMØS"
+            }
+          ]
+        },
+        "private_nodes": {}
+      },
+      {
+        "name": "sommelier",
+        "address": "sommvaloper12ghdy3n809dpxr7kkdtyt3xrf8rse8pyhzlazc",
+        "restake": {
+          "address": "somm1ka6r58g5h27x6gyyjkzxtpdk95k2yurf0x4clf",
+          "run_time": "01:00",
+          "minimum_reward": 10000
+        },
+        "path": "sommelier",
+        "moniker": "PUPMØS",
+        "identity": "69A46F39FB01F4D4",
+        "active": true,
+        "hex_address": "7F7BBCFE87BD656341EF5D0D5E9A80BBD807F3E6",
+        "operator_address": "sommvaloper12ghdy3n809dpxr7kkdtyt3xrf8rse8pyhzlazc",
+        "consensus_pubkey": {
+          "@type": "/cosmos.crypto.ed25519.PubKey",
+          "key": "onp96esdbVRydR0t0uYfXokuN6QJjRKQ8SZGbaiNojI="
+        },
+        "jailed": false,
+        "status": "BOND_STATUS_BONDED",
+        "tokens": "408757744382",
+        "delegator_shares": "408757744382.000000000000000000",
+        "description": {
+          "moniker": "PUPMØS",
+          "identity": "69A46F39FB01F4D4",
+          "website": "",
+          "security_contact": "",
+          "details": "wen witepupper?"
+        },
+        "unbonding_height": "0",
+        "unbonding_time": "1970-01-01T00:00:00Z",
+        "commission": {
+          "commission_rates": {
+            "rate": "0.050000000000000000",
+            "max_rate": "0.100000000000000000",
+            "max_change_rate": "0.100000000000000000"
+          },
+          "update_time": "2022-03-27T22:16:20.037783299Z",
+          "rate": 0.05
+        },
+        "min_self_delegation": "1",
+        "rank": 15,
+        "keybase_image": "https://s3.amazonaws.com/keybase_processed_uploads/11b3dd78058506ef2e45cde098008d05_360_360.jpg",
+        "slashes": null,
+        "mintscan_image": "https://raw.githubusercontent.com/cosmostation/cosmostation_token_resource/master/moniker/sommelier/sommvaloper12ghdy3n809dpxr7kkdtyt3xrf8rse8pyhzlazc.png",
+        "delegations": {
+          "total_tokens": "408757744382",
+          "total_count": 215,
+          "total_tokens_display": 408757.744382,
+          "total_usd": 43572.34927788805
+        },
+        "signing_info": {
+          "address": "sommvalcons10aamel58h4jkxs00t5x4ax5qh0vq0ulxruhmcm",
+          "start_height": "2925522",
+          "index_offset": "3836439",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "0"
+        },
+        "image": "https://raw.githubusercontent.com/cosmostation/cosmostation_token_resource/master/moniker/sommelier/sommvaloper12ghdy3n809dpxr7kkdtyt3xrf8rse8pyhzlazc.png",
+        "uptime": 1,
+        "uptime_periods": [
+          { "blocks": 100, "uptime": 1 },
+          { "blocks": 5000, "uptime": 1 }
+        ],
+        "missed_blocks": 0,
+        "missed_blocks_periods": [
+          { "blocks": 100, "missed": 0 },
+          { "blocks": 5000, "missed": 0 }
+        ],
+        "public_nodes": {
+          "rpc": [
+            {
+              "address": "https://rpc-sommelier.pupmos.network",
+              "provider": "PUPMØS"
+            }
+          ],
+          "rest": [
+            {
+              "address": "https://api-sommelier.pupmos.network",
+              "provider": "PUPMØS"
+            }
+          ]
+        },
+        "private_nodes": {}
+      },
+      {
+        "name": "crescent",
+        "address": "crevaloper1hnjtaayu056h9wjdcn5dj3wxs3tqgajyv8dvzq",
+        "restake": {
+          "address": "cre1ka6r58g5h27x6gyyjkzxtpdk95k2yurf8jf3mw",
+          "run_time": "01:00",
+          "minimum_reward": 10000
+        },
+        "path": "crescent",
+        "moniker": "PUPMØS",
+        "identity": "69A46F39FB01F4D4",
+        "active": true,
+        "hex_address": "C29F8857E745EA3CAE25095F312B8DE609CD38AB",
+        "operator_address": "crevaloper1hnjtaayu056h9wjdcn5dj3wxs3tqgajyv8dvzq",
+        "consensus_pubkey": {
+          "@type": "/cosmos.crypto.ed25519.PubKey",
+          "key": "kwWac6SppE6wHgmcZTocYmQ0Os0GpUuT4plibcqHSjA="
+        },
+        "jailed": false,
+        "status": "BOND_STATUS_BONDED",
+        "tokens": "25154968583",
+        "delegator_shares": "25154968583.000000000000000000",
+        "description": {
+          "moniker": "PUPMØS",
+          "identity": "69A46F39FB01F4D4",
+          "website": "",
+          "security_contact": "",
+          "details": "wen witepupper?"
+        },
+        "unbonding_height": "0",
+        "unbonding_time": "1970-01-01T00:00:00Z",
+        "commission": {
+          "commission_rates": {
+            "rate": "0.050000000000000000",
+            "max_rate": "0.100000000000000000",
+            "max_change_rate": "0.100000000000000000"
+          },
+          "update_time": "2022-04-13T17:26:31.417460544Z",
+          "rate": 0.05
+        },
+        "min_self_delegation": "1",
+        "rank": 28,
+        "mintscan_image": "https://raw.githubusercontent.com/cosmostation/cosmostation_token_resource/master/moniker/crescent/crevaloper1hnjtaayu056h9wjdcn5dj3wxs3tqgajyv8dvzq.png",
+        "keybase_image": "https://s3.amazonaws.com/keybase_processed_uploads/11b3dd78058506ef2e45cde098008d05_360_360.jpg",
+        "slashes": [],
+        "signing_info": {
+          "address": "crevalcons1c20cs4l8gh4ret39p90nz2uducyu6w9t9y4py3",
+          "start_height": "10225",
+          "index_offset": "3973504",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "0"
+        },
+        "delegations": {
+          "total_tokens": "25154968583",
+          "total_count": 196,
+          "total_tokens_display": 25154.968583,
+          "total_usd": 1890.1443393266202
+        },
+        "image": "https://raw.githubusercontent.com/cosmostation/cosmostation_token_resource/master/moniker/crescent/crevaloper1hnjtaayu056h9wjdcn5dj3wxs3tqgajyv8dvzq.png",
+        "uptime": 1,
+        "uptime_periods": [
+          { "blocks": 100, "uptime": 1 },
+          { "blocks": 30000, "uptime": 1 }
+        ],
+        "missed_blocks": 0,
+        "missed_blocks_periods": [
+          { "blocks": 100, "missed": 0 },
+          { "blocks": 30000, "missed": 0 }
+        ],
+        "public_nodes": {
+          "rpc": [
+            {
+              "address": "https://rpc-crescent.pupmos.network",
+              "provider": "PUPMØS"
+            }
+          ],
+          "rest": [
+            {
+              "address": "https://api-crescent.pupmos.network",
+              "provider": "PUPMØS"
+            }
+          ]
+        },
+        "private_nodes": {}
+      },
+      {
+        "name": "teritori",
+        "address": "torivaloper18kxmuftxkg4jyuu5meuxqcg54g38qf69h8w5pd",
+        "restake": {
+          "address": "tori19wkyxq2u0dru5nmpxl7aqwyquhs0n45el4munz",
+          "run_time": "every 10 minutes",
+          "minimum_reward": 100
+        },
+        "path": "teritori",
+        "moniker": "PUPMØS",
+        "identity": "69A46F39FB01F4D4",
+        "active": true,
+        "hex_address": "8053D5602B5CA9EAAEBABADF8F27E19D9334C94A",
+        "operator_address": "torivaloper18kxmuftxkg4jyuu5meuxqcg54g38qf69h8w5pd",
+        "consensus_pubkey": {
+          "@type": "/cosmos.crypto.ed25519.PubKey",
+          "key": "iKKUXJ14FbSxuJiubKqISlcndlO5azOZYrccWcEVdyk="
+        },
+        "jailed": false,
+        "status": "BOND_STATUS_BONDED",
+        "tokens": "467894380220",
+        "delegator_shares": "467894380220.000000000000000000",
+        "description": {
+          "moniker": "PUPMØS",
+          "identity": "69A46F39FB01F4D4",
+          "website": "",
+          "security_contact": "",
+          "details": "wen witepupper?"
+        },
+        "unbonding_height": "0",
+        "unbonding_time": "1970-01-01T00:00:00Z",
+        "commission": {
+          "commission_rates": {
+            "rate": "0.050000000000000000",
+            "max_rate": "0.100000000000000000",
+            "max_change_rate": "0.100000000000000000"
+          },
+          "update_time": "2022-10-07T08:04:27.667402620Z",
+          "rate": 0.05
+        },
+        "min_self_delegation": "1",
+        "rank": 14,
+        "signing_info": {
+          "address": "torivalcons1spfa2cpttj574t46ht0c7flpnkfnfj22evy0mm",
+          "start_height": "58076",
+          "index_offset": "1063493",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "0"
+        },
+        "keybase_image": "https://s3.amazonaws.com/keybase_processed_uploads/11b3dd78058506ef2e45cde098008d05_360_360.jpg",
+        "delegations": {
+          "total_tokens": "467571095454",
+          "total_count": 724,
+          "total_tokens_display": 467571.095454,
+          "total_usd": 29084.792421620616
+        },
+        "slashes": [],
+        "mintscan_image": "https://raw.githubusercontent.com/cosmostation/cosmostation_token_resource/master/moniker/teritori/torivaloper18kxmuftxkg4jyuu5meuxqcg54g38qf69h8w5pd.png",
+        "image": "https://raw.githubusercontent.com/cosmostation/cosmostation_token_resource/master/moniker/teritori/torivaloper18kxmuftxkg4jyuu5meuxqcg54g38qf69h8w5pd.png",
+        "uptime": 1,
+        "uptime_periods": [
+          { "blocks": 100, "uptime": 1 },
+          { "blocks": 10000, "uptime": 1 }
+        ],
+        "missed_blocks": 0,
+        "missed_blocks_periods": [
+          { "blocks": 100, "missed": 0 },
+          { "blocks": 10000, "missed": 0 }
+        ],
+        "public_nodes": {
+          "rpc": [
+            {
+              "address": "https://rpc-teritori.pupmos.network",
+              "provider": "PUPMØS"
+            }
+          ],
+          "rest": [
+            {
+              "address": "https://api-teritori.pupmos.network",
+              "provider": "PUPMØS"
+            }
+          ]
+        },
+        "private_nodes": {}
+      },
+      {
+        "name": "chihuahua",
+        "address": "chihuahuavaloper1tmjgvv2g4arkt224urtn967nlr0s6908vwe24q",
+        "restake": {
+          "address": "chihuahua1ka6r58g5h27x6gyyjkzxtpdk95k2yurfq0h60p",
+          "run_time": "01:00",
+          "minimum_reward": 100000000
+        },
+        "path": "chihuahua",
+        "moniker": "PUPMØS",
+        "identity": "69A46F39FB01F4D4",
+        "active": true,
+        "hex_address": "D39A8739B5924E8B30A9963D483B134F1E4158F1",
+        "operator_address": "chihuahuavaloper1tmjgvv2g4arkt224urtn967nlr0s6908vwe24q",
+        "consensus_pubkey": {
+          "@type": "/cosmos.crypto.ed25519.PubKey",
+          "key": "A6qn2JE7EDoRwzVzudcU4jvEEqn8hapJaXjUqG2C2ow="
+        },
+        "jailed": false,
+        "status": "BOND_STATUS_BONDED",
+        "tokens": "764291905404856",
+        "delegator_shares": "764291905404856.000000000000000000",
+        "description": {
+          "moniker": "PUPMØS",
+          "identity": "69A46F39FB01F4D4",
+          "website": "",
+          "security_contact": "",
+          "details": "wen witepupper?"
+        },
+        "unbonding_height": "0",
+        "unbonding_time": "1970-01-01T00:00:00Z",
+        "commission": {
+          "commission_rates": {
+            "rate": "0.050000000000000000",
+            "max_rate": "0.100000000000000000",
+            "max_change_rate": "0.100000000000000000"
+          },
+          "update_time": "2022-09-01T03:07:17.433587609Z",
+          "rate": 0.05
+        },
+        "min_self_delegation": "1",
+        "rank": 18,
+        "signing_info": {
+          "address": "chihuahuavalcons16wdgwwd4jf8gkv9fjc75swcnfu0yzk83eclj5j",
+          "start_height": "3751087",
+          "index_offset": "1496925",
+          "jailed_until": "1970-01-01T00:00:00Z",
+          "tombstoned": false,
+          "missed_blocks_counter": "0"
+        },
+        "delegations": {
+          "total_tokens": "762407951294263",
+          "total_count": 358,
+          "total_tokens_display": 762407951.294263,
+          "total_usd": 61282.35112503286
+        },
+        "slashes": [],
+        "keybase_image": "https://s3.amazonaws.com/keybase_processed_uploads/11b3dd78058506ef2e45cde098008d05_360_360.jpg",
+        "mintscan_image": "https://raw.githubusercontent.com/cosmostation/cosmostation_token_resource/master/moniker/chihuahua/chihuahuavaloper1tmjgvv2g4arkt224urtn967nlr0s6908vwe24q.png",
+        "image": "https://raw.githubusercontent.com/cosmostation/cosmostation_token_resource/master/moniker/chihuahua/chihuahuavaloper1tmjgvv2g4arkt224urtn967nlr0s6908vwe24q.png",
+        "uptime": 1,
+        "uptime_periods": [
+          { "blocks": 100, "uptime": 1 },
+          { "blocks": 10000, "uptime": 1 }
+        ],
+        "missed_blocks": 0,
+        "missed_blocks_periods": [
+          { "blocks": 100, "missed": 0 },
+          { "blocks": 10000, "missed": 0 }
+        ],
+        "public_nodes": {
+          "rpc": [
+            {
+              "address": "https://rpc-chihuahua.pupmos.network/",
+              "provider": "PUPMØS"
+            }
+          ],
+          "rest": [
+            {
+              "address": "https://api-chihuahua.pupmos.network/",
+              "provider": "PUPMØS"
+            }
+          ]
+        },
+        "private_nodes": {}
+      }
+    ],
+    "profile": {
+      "$schema": "../profile.schema.json",
+      "name": "PUPMØS",
+      "identity": "69A46F39FB01F4D4"
+    }
+  }
+}
