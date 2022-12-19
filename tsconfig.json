@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.msx", "pages/docs/governance/cosmoshub/82.msx", "pages/docs/governance/cosmoshub/82.msx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.mdx", "pages/docs/governance/cosmoshub/82.mdx", "pages/docs/governance/cosmoshub/82.mdx"],
   "exclude": ["node_modules"]
 }
