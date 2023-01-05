@@ -19,7 +19,7 @@ import {
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { useValidators } from "../../hooks";
-import { Chain } from "../../hooks/useValidators";
+import { ChainVariant } from "../../hooks/useValidators";
 
 export function Validators() {
   const validators = useValidators();
@@ -38,7 +38,7 @@ export function Validators() {
   );
 }
 
-function Validator({ validator }: { validator: Chain }) {
+function Validator({ validator }: { validator: ChainVariant }) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref);
   return (
@@ -71,11 +71,11 @@ function Validator({ validator }: { validator: Chain }) {
         <Stat>
           <StatLabel color='gray.400'>STEAK</StatLabel>
           <StatNumber color='pink.200'>
-            ${formatStake(validator.delegations.total_usd)?.toLocaleString()}
+            {validator.delegations ? '$' + formatStake(validator.delegations.total_usd)?.toLocaleString() : 'ZOON'}
           </StatNumber>
           <StatHelpText>
             <StatArrow type="increase" />
-            {validator.uptime * 100}% PUPTIME
+            {validator.uptime  ? validator.uptime * 100 : 'ZOON'}% PUPTIME
           </StatHelpText>
         </Stat>
       </StatGroup>

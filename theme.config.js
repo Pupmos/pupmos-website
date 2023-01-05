@@ -13,6 +13,9 @@ export default {
   footerText: () => (
     <div className="text-current text-sm">
       Pupmos {new Date().getFullYear()} © pupmos.zone
+      <pre style={{ paddingTop: '1rem' }}>
+        {atob(`dGhlIHBvbmlleiBydW4gCmZpcmUgaGFkIGhpeiBmdW4gCnRoZSBvZGR6IHdlcmUgZGVyIDIgYmVhdCAKaGUgd29uIGEgd2lsZS4gbm93IGhleiBkb25lIApoaXogbGl0dG9sIHdpbm5pbmcgc3RyZWFr`)}
+      </pre>
     </div>
   ),
   github,
