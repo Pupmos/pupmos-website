@@ -1,16 +1,48 @@
+import {
+  createRef,
+  MutableRefObject,
+  Ref,
+  RefObject,
+  useMemo,
+  useState,
+} from "react";
 import data from "./pupmos.json";
 
-let sorted = false;
+const sortVals = (vals: any[]) => {
+  return vals.sort((a, b) => {
+    if (!a.delegations) return 1;
+    if (!b.delegations) return -1;
+    return +(b.delegations.total_usd || 0) - +(a.delegations.total_usd || 0);
+  });
+};
+
+data.validator.chains = sortVals(data.validator.chains);
+
+let fetchPromise: Promise<void | CosmosDirectoryValidator> | undefined;
+
 export const useValidators = () => {
-  if (!sorted) {
-    data.validator.chains = data.validator.chains.sort((a, b) => {
-      if (!a.delegations) return 1;
-      if (!b.delegations) return -1;
-      return +(b.delegations.total_usd || 0) - +(a.delegations.total_usd || 0);
+  const [sortedVals, setSortedVals] = useState<
+    CosmosDirectoryValidator
+  >(data as unknown as CosmosDirectoryValidator);
+  if (!fetchPromise && typeof window !== "undefined") {
+    fetchPromise = fetch("https://validators.cosmos.directory/pupmos")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log({ data });
+        data.validator.chains = sortVals(data.validator.chains);
+        const rtn = data as unknown as CosmosDirectoryValidator;
+        setSortedVals(rtn);
+        return rtn;
+      });
+  } else if (fetchPromise) {
+      fetchPromise = fetchPromise.then((data) => {
+        console.log('setting')
+        if (!data) return data;
+        setSortedVals(data);
+        return data;
     });
-    sorted = true;
   }
-  return data as unknown as CosmosDirectoryValidator;
+  return sortedVals;
 };
 
 export interface CosmosDirectoryValidator {

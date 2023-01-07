@@ -22,9 +22,9 @@ export function LiquidStaking() {
     <>
       <div
         ref={containerRef}
-        className="relative mb-10 flex flex-col items-center"
+        className="flex flex-col items-center"
       >
-        <BathPup />
+        <BathPup height={height} />
         <Bubbles width={width} height={height}></Bubbles>
         <Text
           fontSize={{

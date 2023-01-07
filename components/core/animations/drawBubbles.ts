@@ -1,7 +1,8 @@
 import { Ref } from 'react';
 import bubbleImg from "./bub.png";
 
-const drawBubbles = (canvasRef: Ref<HTMLCanvasElement | undefined>, width: any, height: any) => {
+const drawBubbles = (canvasRef: Ref<HTMLCanvasElement | undefined>, _width: any, height: any) => {
+  const getWidth = () => window.innerWidth;
   let globalCounter = 0;
   let ctx: CanvasRenderingContext2D, BubbleImgObj: HTMLImageElement;
   const bubbles: any[] = [];
@@ -20,7 +21,7 @@ const drawBubbles = (canvasRef: Ref<HTMLCanvasElement | undefined>, width: any, 
     const size = rnd(5, 100);
     bubbles.push({
       x: height,
-      y: rnd(0, width * 2) - width,
+      y: rnd(0, getWidth() * 2) - getWidth(),
       swaySpeed: rnd(50, 100),
       swayAmount: rnd(50, 100),
       bubbleSpeed,
@@ -29,11 +30,11 @@ const drawBubbles = (canvasRef: Ref<HTMLCanvasElement | undefined>, width: any, 
   };
 
   const update = () => {
-    ctx.clearRect(0, 0, width, height);
+    ctx.clearRect(0, 0, getWidth(), height);
     ctx.save();
     globalCounter++;
 
-    const globalSway = Math.sin(globalCounter / 1000) * (width / 1.5);
+    const globalSway = Math.sin(globalCounter / 1000) * (getWidth() / 1.5);
     bubbles.forEach((b, k) => {
       const xSwayModify = b.swayAmount * Math.sin(b.x / b.swaySpeed);
       addBubbleToCanvas(
@@ -63,7 +64,7 @@ const drawBubbles = (canvasRef: Ref<HTMLCanvasElement | undefined>, width: any, 
     BubbleImgObj = new Image();
     BubbleImgObj.src = bubbleImg.src;
 
-    for (let x = 0; x < 50; x++) {
+    for (let x = 0; x < 20; x++) {
       setTimeout(() => {
         createBubble();
       }, x * 150);
