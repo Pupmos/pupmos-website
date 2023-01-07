@@ -14,7 +14,7 @@ import {
   useRef,
 } from "react";
 import { useValidators } from "../../hooks";
-import { ChainVariant } from "../../hooks/useValidators";
+import { Chain } from "../../hooks/useValidators";
 
 let stackRefScrollWidth = 0;
 export function Validators() {
@@ -94,7 +94,7 @@ export function Validators() {
 export function Validator({
   validator,
 }: {
-  validator: ChainVariant;
+  validator: Chain;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   // const isVisible = useInView(ref);
