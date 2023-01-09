@@ -41,7 +41,7 @@ export function Validators() {
   return (
     <>
       <Box
-        className="w-screen h-[100px]"
+        className="w-screen h-[300px] overflow-hidden"
         position="absolute"
         left={0}
         right={0}
