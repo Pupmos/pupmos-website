@@ -27,7 +27,7 @@ export function CloudPup() {
   const translateX = useTransform(lightSpring, [-1, 1], ["100vw", "-50vw"]);
   return (
     <>
-      <motion.div className="mb-[-4em] pt-[4em]" ref={ref}>
+      <motion.div className="w-screen h-[300px] absolute mb-[-4em] pt-[4em]" ref={ref}>
         <AnimatePresence>
           {isVisible && (
             <motion.div
