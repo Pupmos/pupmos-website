@@ -1,3 +1,20 @@
-# DPOW
+---
+title: "Delegated Proof of Work (DPOW)"
+---
+import Graphic from './dpow-graphic.png'
 
-And experimental liquid staking protocol leveraging proof of work.
+# Delegated Proof of Work
+
+Invented by Pupmos, Delegated Proof of Work is a way to distribute voting power on a tendermint blockchain network by requiring miners to complete a certain amount of work in order to attain stake. In this system, a proof is a unique number that is used to create a hash for the next block in the chain. This proof is created by combining a number of factors, including a unique string of characters (entropy), the miner's address, and a nonce (a random number used only once). Miners must search for the right nonce by trying different numbers until they find one that creates a hash that meets the difficulty requirements set by the liquid staking contract.
+
+<img src={Graphic.src}/>
+
+In the Delegated Proof of Work system, each block of the blockchain is considered a unit of mining power. When a miner submits a valid proof, the mining power of the validator they delegate to will increase by the number of blocks that have passed since the last valid proof was submitted. These delegations are periodically rebalanced based on the mining power of each validator.
+
+Currently, 16% of all new staking rewards collected by the contract are given to the last miner to submit a valid proof. The mining difficulty is also adjusted based on the amount of time it takes for a proof to be found. If a proof takes more than 5 minutes to mine, the difficulty will be decreased by one. If it takes less than 20 seconds to mine, the difficulty will be increased by one.
+
+## Implementations 
+An experimental implementation of DPOW is live on JoeChain. 
+
+* Website: https://wetjoe.netlify.app/
+* Github: https://github.com/Pupmos/joe-liquid-staking/#readme

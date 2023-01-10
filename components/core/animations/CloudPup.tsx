@@ -2,8 +2,10 @@ import {
   AnimatePresence,
   motion,
   useInView,
+  useMotionValueEvent,
   useScroll,
   useSpring,
+  useTime,
   useTransform,
   VariantLabels,
 } from "framer-motion";
@@ -19,25 +21,26 @@ export function CloudPup() {
   });
   const isVisible = useInView(ref);
   const lightSpring = useSpring(scrollYProgress, {
-    stiffness: 80,
-    damping: 50,
+    stiffness: 60,
+    damping: 40,
     restDelta: 0.001,
   });
 
-  const translateX = useTransform(lightSpring, [-1, 1], ["100vw", "-50vw"]);
+  const translateX = useTransform(lightSpring, [1, 0], ["-22vw", "110vw"]);
+
   return (
     <>
-      <motion.div className="w-screen h-[300px] absolute mb-[-4em] pt-[4em]" ref={ref}>
+      <motion.div ref={ref} className="w-screen h-[300px] overflow-hidden absolute mb-[-4em] pt-[4em]">
         <AnimatePresence>
           {isVisible && (
             <motion.div
               style={{ translateX }}
-              className={"absolute w-[300px] z-10"}
+              className={"absolute w-[300px] z-10 origin-center"}
               ref={imageRef}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5, easings: ["circInOut"], origin: 'center center' }}
             >
               <motion.img
                 src="/animations/pupmos-cloud.png"
@@ -47,6 +50,7 @@ export function CloudPup() {
             </motion.div>
           )}
         </AnimatePresence>
+        <motion.div  className="absolute bottom-0 w-full" />
       </motion.div>
     </>
   );
