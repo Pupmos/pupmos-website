@@ -12,6 +12,7 @@ import Wave from "./wave.png";
 import WaveVector from "./wave.svg";
 import { Bubbles } from "./Bubbles";
 import pupmosFloating from "./pupmos-floating.png";
+import { NextImageMotion } from "../../../components/core/NextImageMotion";
 
 const WIDTH = "240px";
 
@@ -80,10 +81,13 @@ export function BathPup(props: { height: number | undefined }) {
               transition={{ duration: 0.5, easings: ["anticipate"] }}
             >
               {/* <Bubbles width={300} height={300}></Bubbles> */}
-              <motion.img
+              <NextImageMotion
                 src={pupmosFloating.src}
                 alt="Pupmos Bath Bubbles"
-                className="w-full"
+                objectFit='contain'
+                objectPosition={'bottom center'}
+                width={300}
+                height={props.height}
               />
             </motion.div>
           )}

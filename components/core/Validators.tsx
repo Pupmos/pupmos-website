@@ -1,20 +1,9 @@
-import {
-  Box,
-  Image,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
-import {
-  motion,
-  useTime,
-  useTransform,
-} from "framer-motion";
-import {
-  useMemo,
-  useRef,
-} from "react";
+import { Box, Image, Stack, Text } from "@chakra-ui/react";
+import { motion, useTime, useTransform } from "framer-motion";
+import { forwardRef, useMemo, useRef } from "react";
 import { useValidators } from "../../hooks";
 import { Chain } from "../../hooks/useValidators";
+import { NextImageMotion } from "../../components/core/NextImageMotion";
 
 let stackRefScrollWidth = 0;
 export function Validators() {
@@ -34,7 +23,8 @@ export function Validators() {
   const hoverRef = useRef(false);
   const translateX = useTransform(timeTransform, function (value) {
     const offsetCompletionRatio = -1 * (value + 0.2);
-    stackRefScrollWidth = stackRefScrollWidth || stackRef.current?.scrollWidth || 0;
+    stackRefScrollWidth =
+      stackRefScrollWidth || stackRef.current?.scrollWidth || 0;
     return offsetCompletionRatio * (stackRefScrollWidth || 0);
   });
 
@@ -91,11 +81,7 @@ export function Validators() {
   );
 }
 
-export function Validator({
-  validator,
-}: {
-  validator: Chain;
-}) {
+export function Validator({ validator }: { validator: Chain }) {
   const ref = useRef<HTMLDivElement>(null);
   // const isVisible = useInView(ref);
   return (
@@ -119,23 +105,27 @@ export function Validator({
     >
       <Box
         className="mt-[-50px] ml-[-50px]"
-        w="120px"
-        height="120px"
+        width={120}
+        height={120}
         // fallbackSrc={`/validators/base.png`}
         rounded="2xl"
         overflow={"visible"}
       >
-        <Image
+        <NextImageMotion
           // hidden={!isVisible}
           src={`/validators/${validator.name}.png`}
           alt={validator.name}
-          fallbackSrc={`/validators/base.png`}
-          maxWidth="100%"
-          maxHeight={"100%"}
-          rounded="2xl"
+          width={120}
+          height={120}
+          objectFit="contain"
+          objectPosition={"bottom right"}
+          style={{
+            objectFit: "contain",
+            borderRadius: "20px",
+          }}
         />
       </Box>
-      <Box w="full" className='relative' py={2}>
+      <Box w="full" className="relative" py={2}>
         <Text textAlign={"left"} fontSize="2xl" fontWeight="black">
           {validator.name.toUpperCase()}
         </Text>
