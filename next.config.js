@@ -13,6 +13,7 @@ const config = {
   reactStrictMode: true,
   experimental: {
     esmExternals: "loose",
+    newNextLinkBehavior: false
   },
   webpack: function (config) {
     config.experiments = { asyncWebAssembly: true, syncWebAssembly: true };

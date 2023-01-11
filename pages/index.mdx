@@ -5,6 +5,7 @@ title: "Pupmøs: The Goodest Boy in Cosmos"
 import { Header } from "../components/docs";
 import { CornerPup, CloudPup, Validators, CloudInfrastructure, LiquidStaking, Validator } from "../components/core";
 import { useValidators } from "../hooks";
+import NextImage from 'next/image'
 
 
 <CornerPup
@@ -43,12 +44,13 @@ So why struggle with building infrastructure from scratch when you can rely on P
 Developed by Pupmos, Govmos is a revolutionary system that allows decentralized finance (DeFi) protocols to incorporate the essential features of liquid staking, including _**voting, delegating, and autocompounding**_, while preserving the social mechanisms that are important to users. With Govmos, you could build a dex with voting rights, or self-paying loans, or a stablecoin that picks validators, all within the same system.
 
 
-<div className="lg:flex lg:flex-row mt-5 items-center">
+<div className="lg:flex lg:flex-row mt-5 items-center relative">
   <div className="text-xl xs:text-center">
     > Govmos enables <br/> developers to **monetize**, <br/> stakeholders to **vote**, <br/> and protocols to **compound**.
   </div>
-
-  <img className="lg:w-2/3" src="/animations/govmos-cycle-graphic.png"/>
+  <div className='object-contain xs:w-full md:w-2/3 relative h-[400px]'>
+      <NextImage layout='fill' className="object-contain" src="/animations/govmos-cycle-graphic.png"/>
+  </div>
 </div>
 
 

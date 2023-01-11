@@ -7,7 +7,7 @@ import {
   useTransform,
   VariantLabels,
 } from "framer-motion";
-import { useMemo, useRef } from "react";
+import { useMemo, useRef, useState } from "react";
 import Wave from "./wave.png";
 import WaveVector from "./wave.svg";
 import { Bubbles } from "./Bubbles";
@@ -19,6 +19,9 @@ const WIDTH = "240px";
 export function BathPup(props: { height: number | undefined }) {
   const ref = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
+  const [waveImageSrc, setWaveImageSrc] = useState(
+    Wave.blurDataURL || Wave.src
+  );
   const { scrollYProgress } = useScroll({
     target: ref,
     // offset: ["end end", "start start"],
@@ -36,12 +39,7 @@ export function BathPup(props: { height: number | undefined }) {
     restDelta: 0.001,
   });
 
-  const translateX = useTransform(
-    lightSpring,
-    [-1, 1],
-    ["-60vw", "80vw"],
-    {}
-  );
+  const translateX = useTransform(lightSpring, [-1, 1], ["-60vw", "80vw"], {});
   const y = useTransform(
     waveSpring,
     (value) => -1 * (5 + Math.sin(value * 40) * 5)
@@ -53,13 +51,24 @@ export function BathPup(props: { height: number | undefined }) {
         height: props.height,
       }}
     >
+      {/* Phantom Image to leverage NextImage on background image */}
+      <NextImageMotion
+        className="opacity-0 pointer-events-none fixed z-0"
+        height={10}
+        width={200}
+        src={Wave.src}
+        alt="wave"
+        onLoad={(e) => {
+          setWaveImageSrc(e.currentTarget.currentSrc);
+        }}
+      ></NextImageMotion>
       <div
         ref={ref}
         className="z-20"
         style={{
           pointerEvents: "none",
           // background: `bottom left 10px / 300px auto url(${Wave.src}) repeat-x, bottom left 100px / 300px auto url(${Wave.src}) repeat-x`,
-          background: `bottom left 10px / 200px auto url(${Wave.src}) repeat-x`,
+          background: `bottom left 10px / 200px auto url('${waveImageSrc}') repeat-x`,
           // backgroundSize: 'contain',
           width: "100vw",
           position: "absolute",
@@ -71,25 +80,21 @@ export function BathPup(props: { height: number | undefined }) {
       <motion.div className="relative w-full h-full">
         <AnimatePresence>
           {isVisible && (
-            <motion.div
+            <NextImageMotion
               style={{ translateX, translateY: y }}
-              className={"absolute bottom-0 w-[300px] z-10"}
+              className={"absolute bottom-0 z-10"}
               ref={imageRef}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5, easings: ["anticipate"] }}
-            >
-              {/* <Bubbles width={300} height={300}></Bubbles> */}
-              <NextImageMotion
-                src={pupmosFloating.src}
-                alt="Pupmos Bath Bubbles"
-                objectFit='contain'
-                objectPosition={'bottom center'}
-                width={300}
-                height={props.height}
-              />
-            </motion.div>
+              src={pupmosFloating.src}
+              alt="Pupmos Bath Bubbles"
+              // objectFit="contain"
+              // objectPosition={"bottom right"}
+              width={300}
+              height={255}
+            />
           )}
         </AnimatePresence>
       </motion.div>

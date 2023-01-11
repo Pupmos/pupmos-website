@@ -10,6 +10,7 @@ import {
   VariantLabels,
 } from "framer-motion";
 import { useMemo, useRef } from "react";
+import { NextImageMotion } from '../NextImageMotion';
 
 const WIDTH = "240px";
 export function CloudPup() {
@@ -42,10 +43,12 @@ export function CloudPup() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5, easings: ["circInOut"], origin: 'center center' }}
             >
-              <motion.img
+              <NextImageMotion
                 src="/animations/pupmos-cloud.png"
                 alt="Pupmos Cloud"
                 className="w-full"
+                width={300}
+                height={300}
               />
             </motion.div>
           )}
