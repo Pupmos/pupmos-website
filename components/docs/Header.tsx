@@ -15,7 +15,7 @@ export function Header() {
           href="https://twitter.com/pupmos"
           className="h-5"
         >
-          <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/pupmos?colorA=2B323B&colorB=1e2329&style=flat&label=Twitter"></img>
+          <img alt="Twitter Follow" src="https://img.shields.io/badge/follow-%40pupmos-1DA1F2?logo=twitter&colorA=2B323B&colorB=1e2329&style=flat"></img>
         </a>
 
         <a
